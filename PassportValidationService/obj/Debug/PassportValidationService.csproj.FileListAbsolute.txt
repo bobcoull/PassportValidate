@@ -1,0 +1,10 @@
+c:\users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationService.dll.config
+c:\users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationService.dll
+c:\users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationService.pdb
+c:\users\robertcoull\source\repos\PassportValidation\PassportValidationService\obj\Debug\PassportValidationService.csproj.CoreCompileInputs.cache
+c:\users\robertcoull\source\repos\PassportValidation\PassportValidationService\obj\Debug\PassportValidationService.dll
+c:\users\robertcoull\source\repos\PassportValidation\PassportValidationService\obj\Debug\PassportValidationService.pdb
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\obj\Debug\PassportValidationService.csprojAssemblyReference.cache
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationLibrary.dll
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationLibrary.pdb
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\obj\Debug\PassportValidationService.csproj.CopyComplete

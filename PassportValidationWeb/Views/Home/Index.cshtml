@@ -1,0 +1,112 @@
+﻿@model PassportValidationWeb.Models.MRZDataCaptureModel
+
+@{
+    Layout = "";    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link href="/styles/OuterLayout.css" rel="stylesheet" />
+    <style>
+        .dataentryarea {
+            width: 100%;
+            height: 100%;
+            padding: 25px 25px 25px 25px;
+            background-color: #f4a39f;
+            border: 2px solid #000000;
+        }
+
+        .personicon {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+
+        .dataform {
+            margin-left: 200px;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .formlabel {
+            text-align: right;
+            float: left;
+            width: 30%;
+            padding: 2px 5px 2px 0;
+        }
+
+        .formdata {
+            margin-left: 32%;
+            width: 40%;
+            padding: 2px 5px 2px 0;
+        }
+
+        .formlabelfullwidth {
+            text-align: right;
+            float: left;
+            width: 20%;
+            padding: 2px 5px 2px 0;
+        }
+
+        .formdatafullwidth {
+            text-align: left;
+            margin-left: 22%;
+            width: 78%;
+            padding: 2px 5px 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                @using (Html.BeginForm())
+                {
+                    <div class="dataentryarea">
+                        <div class="personicon"><img src="/images/personplaceholder.png" /></div>
+                        <div class="dataform">
+                            <div class="formlabel">Passport No</div>
+                            <div class="formdata">@Html.TextBoxFor(model => model.PassportNumber, new { MaxLength = 9, Size = "15" })</div>
+
+                            <div class="formlabel">Nationality</div>
+                            <div class="formdata">@Html.TextBoxFor(model => model.Nationality, new { MaxLength = 3, Size = "40" })</div>
+
+                            <div class="formlabel">Date of Birth</div>
+                            <div class="formdata">
+                                @Html.TextBoxFor(model => model.DateOfBirthDD, new { MaxLength = 2, Size = "2", Placeholder = "DD" })
+                                &nbsp;
+                                @Html.TextBoxFor(model => model.DateOfBirthMM, new { MaxLength = 2, Size = "2", Placeholder = "MM" })
+                                &nbsp;
+                                @Html.TextBoxFor(model => model.DateOfBirthYY, new { MaxLength = 2, Size = "2", Placeholder = "YY" })
+                            </div>
+
+                            <div class="formlabel">Gender</div>
+                            <div class="formdata">@Html.TextBoxFor(model => model.Gender, new { MaxLength = 1, Size = "2" })</div>
+
+                            <div class="formlabel">Date of Expiry</div>
+                            <div class="formdata">
+                                @Html.TextBoxFor(model => model.DateOfExpiryDD, new { MaxLength = 2, Size = "2", Placeholder = "DD" })
+                                &nbsp;
+                                @Html.TextBoxFor(model => model.DateOfExpiryMM, new { MaxLength = 2, Size = "2", Placeholder = "MM" })
+                                &nbsp;
+                                @Html.TextBoxFor(model => model.DateOfExpiryYY, new { MaxLength = 2, Size = "2", Placeholder = "YY" })
+                            </div>
+                        </div>
+                        <div style="text-align: center; clear: both;">
+                            <div>
+                                <div class="formlabelfullwidth">MRZ (line 2)</div>
+                                <div class="formdatafullwidth">
+                                    @Html.TextBoxFor(model => model.MRZ, new { MaxLength = 44, Size = "60" })
+                                </div>
+                            </div>
+                            <div style="clear: both; padding-top: 20px;">
+                                <input type="submit" value="Validate" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</html>

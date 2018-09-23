@@ -1,0 +1,6 @@
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationServiceClient\bin\Debug\PassportValidationServiceClient.dll
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationServiceClient\bin\Debug\PassportValidationServiceClient.pdb
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationServiceClient\obj\Debug\PassportValidationServiceClient.csproj.CoreCompileInputs.cache
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationServiceClient\obj\Debug\PassportValidationServiceClient.dll
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationServiceClient\obj\Debug\PassportValidationServiceClient.pdb
+C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationServiceClient\bin\Debug\PassportValidationServiceClient.dll.config

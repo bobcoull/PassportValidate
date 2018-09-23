@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="54600825-9027-4d2c-869f-63349cf0dbd6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54207/Validate.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Validate.xsd" MetadataType="Schema" ID="f064632d-d8d6-4f8e-81fc-2ee740e74e06" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd1" />
+    <MetadataFile FileName="Validate1.xsd" MetadataType="Schema" ID="4b72271f-570a-4328-b40d-236edcf30a4b" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd0" />
+    <MetadataFile FileName="Validate.disco" MetadataType="Disco" ID="d05dd954-9396-4af3-a87c-7032d2773067" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?disco" />
+    <MetadataFile FileName="Validate2.xsd" MetadataType="Schema" ID="b3d79e6e-c18c-4561-9ffe-dd5e382d5a98" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd2" />
+    <MetadataFile FileName="Validate.wsdl" MetadataType="Wsdl" ID="6507c84f-8424-4a2d-aab6-30d52b9a66d5" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,94 @@
+﻿@model PassportValidationWeb.Models.ValidateMRZResultModel
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link href="/styles/OuterLayout.css" rel="stylesheet" />
+    <style>
+        .dataentryarea {
+            width: 100%;
+            height: 100%;
+            padding: 25px 25px 25px 25px;
+        }
+
+        .dataentryarea .header {padding: 10px 10px 10px 10px}
+
+        .datatable {
+            border: 1px solid #aaaaaa;
+        }
+
+        .dataform {
+            margin-left: 200px;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .formlabel {
+            margin: 0 0 0 5px;
+            text-align: left;
+            float: left;
+            width: 50%;
+            padding: 2px 2px 2px 0;
+            border-right: 1px solid #aaaaaa;
+
+        }
+
+        .formdata {
+            margin-left: 50%;
+            text-indent: 5px;
+            width: 50%;
+            padding: 2px 2px 2px 0;
+        }
+
+        .headerbackground {
+            background-color: #aaaaaa;
+            padding: 2px 2px 2px 0;
+        }
+
+        .alternatelabel {
+            background-color: #eeeeee;
+        }
+
+        .alternatedata {
+            background-color: #eeeeee;
+            padding-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <div class="dataentryarea">
+                    <div class="header">Results</div>
+                    <div class="datatable">
+                        <div class="headerbackground">&nbsp;</div>
+                        <div class="formlabel alternatelabel">Passport Number check digit</div>
+                        <div class="formdata alternatedata">@Model.IsPassportNumberCheckDigitValid.RetunPassFailString()</div>
+                        <div class="formlabel">Date of Birth check digit</div>
+                        <div class="formdata">@Model.IsDateOfBirthCheckDigitValid.RetunPassFailString()</div>
+                        <div class="formlabel alternatelabel">Passport Expiration Date check digit</div>
+                        <div class="formdata alternatedata">@Model.IsDateOfExpiryCheckDigitValid.RetunPassFailString()</div>
+                        <div class="formlabel">Personal number check digit</div>
+                        <div class="formdata">@Model.IsPersonalNumberCheckDigitValid.RetunPassFailString()</div>
+                        <div class="formlabel alternatelabel">Final check digit</div>
+                        <div class="formdata alternatedata">@Model.IsFinalCheckDigitValid.RetunPassFailString()</div>
+                        <div class="formlabel">Gender cross check</div>
+                        <div class="formdata">@Model.IsGenderCrossCheckValid.RetunPassFailString()</div>
+                        <div class="formlabel alternatelabel">Date of Birth cross check</div>
+                        <div class="formdata alternatedata">@Model.IsDateOfBirthCrossCheckValid.RetunPassFailString()</div>
+                        <div class="formlabel">Expiration date cross check</div>
+                        <div class="formdata">@Model.IsDateOfExpiryCrossCheckValid.RetunPassFailString()</div>
+                        <div class="formlabel alternatelabel">Nationality cross check</div>
+                        <div class="formdata alternatedata">@Model.IsNationalitCrossCheckValid.RetunPassFailString()</div>
+                        <div class="formlabel">Passport No. cross check</div>
+                        <div class="formdata">@Model.IsPassportNumberCrossCheckValid.RetunPassFailString()</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="PassportValidationService.Validate" CodeBehind="Validate.svc.cs" %>
