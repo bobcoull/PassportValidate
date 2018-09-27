@@ -26,8 +26,9 @@ namespace PassportValidationWeb.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            //MRZDataCaptureModel mrzDataCaptureModel = new MRZDataCaptureModel();
+            MRZDataCaptureModel mrzDataCaptureModel = new MRZDataCaptureModel();
 
+            /*
             // preload with test data for initial testing
             MRZDataCaptureModel mrzDataCaptureModel = new MRZDataCaptureModel
             {
@@ -39,6 +40,7 @@ namespace PassportValidationWeb.Controllers
                 DateOfExpiry = "28/02/2023",
                 PersonalNumber = "<<<<<<<<<<<<<<"
             };
+            */
 
             mrzDataCaptureModel.GenderItems = GetGenders();
 
