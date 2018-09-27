@@ -21,9 +21,10 @@ namespace PassportValidationService
             string nationality, 
             string dateOfBirth, 
             string gender,
-            string dateOfExpiry)
+            string dateOfExpiry,
+            string personalNumber)
         {
-            return validate.ValidateMRZ(mrz, passportNumber, nationality, dateOfBirth, gender, dateOfExpiry);
+            return validate.ValidateMRZ(mrz, passportNumber, nationality, dateOfBirth, gender, dateOfExpiry, personalNumber);
         }
     }
 }

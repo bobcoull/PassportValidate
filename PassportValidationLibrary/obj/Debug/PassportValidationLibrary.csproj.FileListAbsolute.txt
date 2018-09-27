@@ -3,3 +3,8 @@ C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary\b
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary\bin\Debug\PassportValidationLibrary.pdb
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary\obj\Debug\PassportValidationLibrary.dll
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary\obj\Debug\PassportValidationLibrary.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary\obj\Debug\PassportValidationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary\obj\Debug\PassportValidationLibrary.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary\obj\Debug\PassportValidationLibrary.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary\bin\Debug\PassportValidationLibrary.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary\bin\Debug\PassportValidationLibrary.pdb

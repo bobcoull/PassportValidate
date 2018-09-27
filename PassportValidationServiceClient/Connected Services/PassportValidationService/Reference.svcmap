@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="54600825-9027-4d2c-869f-63349cf0dbd6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8847e9d0-5278-4cac-b621-c55154d3aabe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:54207/Validate.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Validate.xsd" MetadataType="Schema" ID="f064632d-d8d6-4f8e-81fc-2ee740e74e06" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd1" />
-    <MetadataFile FileName="Validate1.xsd" MetadataType="Schema" ID="4b72271f-570a-4328-b40d-236edcf30a4b" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd0" />
-    <MetadataFile FileName="Validate.disco" MetadataType="Disco" ID="d05dd954-9396-4af3-a87c-7032d2773067" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?disco" />
-    <MetadataFile FileName="Validate2.xsd" MetadataType="Schema" ID="b3d79e6e-c18c-4561-9ffe-dd5e382d5a98" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd2" />
-    <MetadataFile FileName="Validate.wsdl" MetadataType="Wsdl" ID="6507c84f-8424-4a2d-aab6-30d52b9a66d5" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?wsdl" />
+    <MetadataFile FileName="Validate.xsd" MetadataType="Schema" ID="9c126788-f97f-4b9a-b205-6770f2cb5539" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd1" />
+    <MetadataFile FileName="Validate1.xsd" MetadataType="Schema" ID="39232691-4f1e-45e4-b257-539d9e0a7ed9" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd0" />
+    <MetadataFile FileName="Validate.disco" MetadataType="Disco" ID="9279cf70-7cd0-47dd-9603-d8f643e600bd" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?disco" />
+    <MetadataFile FileName="Validate2.xsd" MetadataType="Schema" ID="b04a1233-ca45-4421-a158-d61e6a86f28b" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?xsd=xsd2" />
+    <MetadataFile FileName="Validate.wsdl" MetadataType="Wsdl" ID="21f53d28-297c-440b-a796-c336dbf7cb09" SourceId="1" SourceUrl="http://localhost:54207/Validate.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

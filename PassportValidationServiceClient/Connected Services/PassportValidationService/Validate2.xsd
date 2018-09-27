@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PassportValidationLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PassportValidationLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ValidateMRZ_Result">
+  <xs:complexType name="ValidateMRZResult">
     <xs:sequence>
       <xs:element minOccurs="0" name="IsDateOfBirthCheckDigitValid" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsDateOfBirthCrossCheckValid" type="xs:boolean" />
@@ -12,7 +12,8 @@
       <xs:element minOccurs="0" name="IsPassportNumberCheckDigitValid" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsPassportNumberCrossCheckValid" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsPersonalNumberCheckDigitValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPersonalNumberCrossCheckValid" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ValidateMRZ_Result" nillable="true" type="tns:ValidateMRZ_Result" />
+  <xs:element name="ValidateMRZResult" nillable="true" type="tns:ValidateMRZResult" />
 </xs:schema>

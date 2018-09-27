@@ -8,3 +8,13 @@ C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\o
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationLibrary.dll
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\bin\PassportValidationLibrary.pdb
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationService\obj\Debug\PassportValidationService.csproj.CopyComplete
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\obj\Debug\PassportValidationService.csprojAssemblyReference.cache
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\obj\Debug\PassportValidationService.csproj.CoreCompileInputs.cache
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\obj\Debug\PassportValidationService.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\obj\Debug\PassportValidationService.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\bin\PassportValidationService.dll.config
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\bin\PassportValidationService.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\bin\PassportValidationService.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\bin\PassportValidationLibrary.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\bin\PassportValidationLibrary.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationService\obj\Debug\PassportValidationService.csproj.CopyComplete

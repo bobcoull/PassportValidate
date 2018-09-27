@@ -15,9 +15,9 @@ namespace PassportValidationServiceClient.PassportValidationService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ValidateMRZ_Result", Namespace="http://schemas.datacontract.org/2004/07/PassportValidationLibrary")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ValidateMRZResult", Namespace="http://schemas.datacontract.org/2004/07/PassportValidationLibrary")]
     [System.SerializableAttribute()]
-    public partial class ValidateMRZ_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class ValidateMRZResult : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -51,6 +51,9 @@ namespace PassportValidationServiceClient.PassportValidationService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsPersonalNumberCheckDigitValidField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsPersonalNumberCrossCheckValidField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -192,6 +195,19 @@ namespace PassportValidationServiceClient.PassportValidationService {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsPersonalNumberCrossCheckValid {
+            get {
+                return this.IsPersonalNumberCrossCheckValidField;
+            }
+            set {
+                if ((this.IsPersonalNumberCrossCheckValidField.Equals(value) != true)) {
+                    this.IsPersonalNumberCrossCheckValidField = value;
+                    this.RaisePropertyChanged("IsPersonalNumberCrossCheckValid");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -207,10 +223,10 @@ namespace PassportValidationServiceClient.PassportValidationService {
     public interface IValidate {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IValidate/ValidateMRZ", ReplyAction="http://tempuri.org/IValidate/ValidateMRZResponse")]
-        PassportValidationServiceClient.PassportValidationService.ValidateMRZ_Result ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry);
+        PassportValidationServiceClient.PassportValidationService.ValidateMRZResult ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry, string personalNumber);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IValidate/ValidateMRZ", ReplyAction="http://tempuri.org/IValidate/ValidateMRZResponse")]
-        System.Threading.Tasks.Task<PassportValidationServiceClient.PassportValidationService.ValidateMRZ_Result> ValidateMRZAsync(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry);
+        System.Threading.Tasks.Task<PassportValidationServiceClient.PassportValidationService.ValidateMRZResult> ValidateMRZAsync(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry, string personalNumber);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -240,12 +256,12 @@ namespace PassportValidationServiceClient.PassportValidationService {
                 base(binding, remoteAddress) {
         }
         
-        public PassportValidationServiceClient.PassportValidationService.ValidateMRZ_Result ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry) {
-            return base.Channel.ValidateMRZ(mrz, passportNumber, nationality, dateOfBirth, gender, dateOfExpiry);
+        public PassportValidationServiceClient.PassportValidationService.ValidateMRZResult ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry, string personalNumber) {
+            return base.Channel.ValidateMRZ(mrz, passportNumber, nationality, dateOfBirth, gender, dateOfExpiry, personalNumber);
         }
         
-        public System.Threading.Tasks.Task<PassportValidationServiceClient.PassportValidationService.ValidateMRZ_Result> ValidateMRZAsync(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry) {
-            return base.Channel.ValidateMRZAsync(mrz, passportNumber, nationality, dateOfBirth, gender, dateOfExpiry);
+        public System.Threading.Tasks.Task<PassportValidationServiceClient.PassportValidationService.ValidateMRZResult> ValidateMRZAsync(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry, string personalNumber) {
+            return base.Channel.ValidateMRZAsync(mrz, passportNumber, nationality, dateOfBirth, gender, dateOfExpiry, personalNumber);
         }
     }
 }

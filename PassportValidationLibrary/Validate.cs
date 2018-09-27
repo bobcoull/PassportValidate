@@ -16,8 +16,9 @@ namespace PassportValidationLibrary
         /// <param name="dateOfBirth">Dte of Birth - YYMMDD</param>
         /// <param name="gender">M or F or less than sign</param>
         /// <param name="dateOfExpiry">Expiry Date - YYMMDD</param>
+        /// <param name="personalNumber">personal number</param>
         /// <returns>ValidateMRZResult object</returns>
-        ValidateMRZResult ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry);
+        ValidateMRZResult ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry, string personalNumber);
 
         /// <summary>
         /// Method to  return the check digit of the input string
@@ -45,8 +46,9 @@ namespace PassportValidationLibrary
         /// <param name="dateOfBirth">Dte of Birth - YYMMDD</param>
         /// <param name="gender">M or F or less than sign</param>
         /// <param name="dateOfExpiry">Expiry Date - YYMMDD</param>
+        /// <param name="personalNumber">Personal Number</param>
         /// <returns>ValidateMRZResult object</returns>
-        public ValidateMRZResult ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry)
+        public ValidateMRZResult ValidateMRZ(string mrz, string passportNumber, string nationality, string dateOfBirth, string gender, string dateOfExpiry, string personalNumber)
         {
             ValidateMRZResult result = new ValidateMRZResult
             {
@@ -59,7 +61,8 @@ namespace PassportValidationLibrary
                 IsDateOfBirthCrossCheckValid = false,
                 IsDateOfExpiryCrossCheckValid = false,
                 IsNationalitCrossCheckValid = false,
-                IsPassportNumberCrossCheckValid = false
+                IsPassportNumberCrossCheckValid = false,
+                IsPersonalNumberCrossCheckValid = false
             };
 
             // this will be set to false if any item specific check digits can not be checked, due to invalid characters
@@ -96,9 +99,9 @@ namespace PassportValidationLibrary
             }
 
             // Validate Passport Number check digit
-            if (IsValidPattern(mrzPassportNumber, true, true))
+            if (IsValidPattern(mrzPassportNumber, true, true) && IsValidPattern(passportNumber, true, true))
             {
-                result.IsPassportNumberCheckDigitValid = IsCheckDigitValid(mrzPassportNumber, mrzCheckDigitPassportNumber, true, true);
+                result.IsPassportNumberCheckDigitValid = IsCheckDigitValid(mrzPassportNumber, passportNumber, mrzCheckDigitPassportNumber, true, true);
             }
             else
             {
@@ -120,9 +123,9 @@ namespace PassportValidationLibrary
             }
 
             // Validate Date of Birth check digit
-            if (IsValidPattern(mrzDateOfBirth, true, false))
+            if (IsValidPattern(mrzDateOfBirth, true, false) && IsValidPattern(dateOfBirth, true, false))
             {
-                result.IsDateOfBirthCheckDigitValid = IsCheckDigitValid(mrzDateOfBirth, mrzCheckDigitDateOfBirth, true, false);
+                result.IsDateOfBirthCheckDigitValid = IsCheckDigitValid(mrzDateOfBirth, dateOfBirth, mrzCheckDigitDateOfBirth, true, false);
             }
             else
             {
@@ -143,19 +146,26 @@ namespace PassportValidationLibrary
 
 
             // Validate Passport Expiration check digit
-            if (IsValidPattern(mrzDateOfExpiry, true, false))
+            if (IsValidPattern(mrzDateOfExpiry, true, false) && IsValidPattern(dateOfExpiry, true, false))
             {
-                result.IsDateOfExpiryCheckDigitValid = IsCheckDigitValid(mrzDateOfExpiry, mrzCheckDigitDateOfExpiry, true, false);
+                result.IsDateOfExpiryCheckDigitValid = IsCheckDigitValid(mrzDateOfExpiry, dateOfExpiry, mrzCheckDigitDateOfExpiry, true, false);
             }
             else
             {
                 isFinalCheckDigitOkToCheck = false;
             }
 
-            // Validate Personal Number check digit
-            if (IsValidPattern(mrzPersonalNumber, true, true))
+            // Validate Personal Number
+            // can only do this is an entered number is passed
+            if (!string.IsNullOrEmpty(personalNumber))
             {
-                result.IsPersonalNumberCheckDigitValid = IsCheckDigitValid(mrzPersonalNumber, mrzCheckDigitPersonalNumber, true, true);
+                result.IsPersonalNumberCrossCheckValid = (mrzPersonalNumber == personalNumber) ? true : false;
+            }
+
+            // Validate Personal Number check digit
+            if (IsValidPattern(mrzPersonalNumber, true, true) && IsValidPattern(personalNumber, true, true))
+            {
+                result.IsPersonalNumberCheckDigitValid = IsCheckDigitValid(mrzPersonalNumber, personalNumber, mrzCheckDigitPersonalNumber, true, true);
             }
             else
             {
@@ -166,7 +176,7 @@ namespace PassportValidationLibrary
             // Check digit for digits 1–10 (Passpor Number), 14–20 (Date Of Birth), and 22–43 (Date Of Expiry + Personal Number)
             if (isFinalCheckDigitOkToCheck)
             {
-                string finalCheckDigitString = String.Concat(mrzPassportNumber,
+                string finalMrzCheckDigitString = String.Concat(mrzPassportNumber,
                     mrzCheckDigitPassportNumber,
                     mrzDateOfBirth,
                     mrzCheckDigitDateOfBirth,
@@ -175,7 +185,16 @@ namespace PassportValidationLibrary
                     mrzPersonalNumber,
                     mrzCheckDigitPersonalNumber);
 
-                result.IsFinalCheckDigitValid = IsCheckDigitValid(finalCheckDigitString, mrzCheckDigitOverDigits, true, true);
+                string finalInputCheckDigitString = String.Concat(passportNumber,
+                    mrzCheckDigitPassportNumber,
+                    dateOfBirth,
+                    mrzCheckDigitDateOfBirth,
+                    dateOfExpiry,
+                    mrzCheckDigitDateOfExpiry,
+                    personalNumber,
+                    mrzCheckDigitPersonalNumber);
+
+                result.IsFinalCheckDigitValid = IsCheckDigitValid(finalMrzCheckDigitString, finalInputCheckDigitString, mrzCheckDigitOverDigits, true, true);
             }
 
             return result;
@@ -211,17 +230,22 @@ namespace PassportValidationLibrary
         /// <summary>
         /// Return true if expected check digit is equal to actual check digit
         /// </summary>
+        /// <param name="mrzExtractString">string extracted from mrz</param>
         /// <param name="inputString">the input string</param>
         /// <param name="expectedCheckDigitString">the check digit to test against in string format</param>
         /// <returns></returns>
-        private bool IsCheckDigitValid(string inputString, string expectedCheckDigitString, bool isNumericAllowed, bool isAlphaAllowed)
+        private bool IsCheckDigitValid(string mrzExtractString, string inputString, string expectedCheckDigitString, bool isNumericAllowed, bool isAlphaAllowed)
         {       
             int expectedCheckDigit;
-            int actualCheckDigit = GetCheckDigit(inputString, isNumericAllowed, isAlphaAllowed); // return -1 indicates a character error in string            
 
-            if (actualCheckDigit != -1 && int.TryParse(expectedCheckDigitString, out expectedCheckDigit))
+            if (mrzExtractString == inputString)
             {
-                return (expectedCheckDigit == actualCheckDigit) ? true : false;
+                int actualCheckDigit = GetCheckDigit(mrzExtractString, isNumericAllowed, isAlphaAllowed); // return -1 indicates a character error in string            
+
+                if (actualCheckDigit != -1 && int.TryParse(expectedCheckDigitString, out expectedCheckDigit))
+                {
+                    return (expectedCheckDigit == actualCheckDigit) ? true : false;
+                }
             }
 
             return false;

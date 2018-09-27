@@ -10,3 +10,15 @@ C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary_T
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary_Tests\bin\Debug\PassportValidationLibrary.pdb
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.dll
 C:\Users\robertcoull\source\repos\PassportValidation\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\PassportValidationLibrary_Tests.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\PassportValidationLibrary_Tests.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\nunit.framework.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\PassportValidationLibrary.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\PassportValidationLibrary.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\nunit.framework.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\bin\Debug\nunit.framework.xml
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.csproj.CoreCompileInputs.cache
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.csproj.CopyComplete
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.dll
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.pdb
+C:\Users\robertcoull\source\repos\PassportValidate\PassportValidationLibrary_Tests\obj\Debug\PassportValidationLibrary_Tests.csprojAssemblyReference.cache

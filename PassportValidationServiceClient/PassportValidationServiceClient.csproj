@@ -47,6 +47,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Objects\ValidateMRZClientResult.cs" />
     <Compile Include="Validate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\PassportValidationService\PassportValidationServiceClient.PassportValidationService.ValidateMRZ_Result.datasource">
+    <None Include="Connected Services\PassportValidationService\PassportValidationServiceClient.PassportValidationService.ValidateMRZResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PassportValidationService\Validate.wsdl" />

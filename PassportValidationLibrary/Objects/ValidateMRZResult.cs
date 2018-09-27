@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace PassportValidationLibrary
 {
     /// <summary>
@@ -19,5 +16,6 @@ namespace PassportValidationLibrary
         public bool IsDateOfExpiryCrossCheckValid { get; set; }
         public bool IsNationalitCrossCheckValid { get; set; }
         public bool IsPassportNumberCrossCheckValid { get; set; }
+        public bool IsPersonalNumberCrossCheckValid { get; set; }
     }
 }

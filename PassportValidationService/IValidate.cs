@@ -19,7 +19,8 @@ namespace PassportValidationService
             string nationality, 
             string dateOfBirth,
             string gender, 
-            string dateOfExpiry);
+            string dateOfExpiry,
+            string personalNumber);
     }
 
     // TODO: Add new method that receives an encrypted string containing parameters

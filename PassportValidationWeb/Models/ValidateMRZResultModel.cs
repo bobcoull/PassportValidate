@@ -7,6 +7,8 @@ namespace PassportValidationWeb.Models
 {
     public class ValidateMRZResultModel
     {
+        public bool IsServiceAvailable { get; set; }
+
         public bool IsPassportNumberCheckDigitValid { get; set; }
         public bool IsDateOfBirthCheckDigitValid { get; set; }
         public bool IsDateOfExpiryCheckDigitValid { get; set; }
@@ -17,5 +19,6 @@ namespace PassportValidationWeb.Models
         public bool IsDateOfExpiryCrossCheckValid { get; set; }
         public bool IsNationalitCrossCheckValid { get; set; }
         public bool IsPassportNumberCrossCheckValid { get; set; }
+        public bool IsPersonalNumberCrossCheckValid { get; set; }
     }
 }
